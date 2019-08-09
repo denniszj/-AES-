@@ -1,6 +1,10 @@
 # NetEase-cloud-music
 网易云音乐评论解密
 
+素材准备：
+pip install jieba
+pip install wordcloud
+
 整个过程有三个关键参数
 key : 双方约定
 iv : 双方约定
