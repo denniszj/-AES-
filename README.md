@@ -1,13 +1,13 @@
 # NetEase-cloud-music
 网易云音乐评论解密
 
-素材准备：
+# 素材准备：
 pip install jieba
 pip install wordcloud
 
-整个过程有三个关键参数
+# 整个过程有三个关键参数
 key : 双方约定
-iv : 双方约定
+iv :  双方约定
 randkey : 前端生成( createrandkey(16)即可生成 )
 1 第一次加密：使用 key 和 iv进行第一次AES加密
 params是原始的json参数,比如是 要传的手机号
@@ -17,10 +17,10 @@ var params1 = aesEncrypt(JSON.stringify(params),key,iv)
 var params2 = aesEncrypt(params1,randkey,iv)
 3 将randkey 和 加密params2 传输到服务端
 即传两个参数即可
-    {
-        randkey:randkey,
-        params:params2
-    }
-后端操作：
+{
+   randkey: randkey,
+   params : params2
+}
+# 后端操作：
 使用randkey 解密出 prams1
 使用key     解密出 params
